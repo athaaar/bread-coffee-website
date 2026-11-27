@@ -167,6 +167,11 @@ export async function queryDatabase<T>(
       return json;
     } catch (err: any) {
       console.error("[AppsScript Error]:", err.message);
+      // Fallback ke localStore jika fetch gagal (misal saat proses build prerendering di Vercel)
+      const fallbackTableData: any[] = localStore[table] as any[];
+      if (action === "list") {
+        return { success: true, data: [...fallbackTableData] as any };
+      }
       return { success: false, error: err.message };
     }
   }

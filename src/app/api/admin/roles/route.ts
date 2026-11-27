@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { queryDatabase, Role, User } from "@/lib/db";
 import { getSession } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const rolesRes = await queryDatabase<Role[]>("list", "Roles");

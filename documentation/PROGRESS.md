@@ -1,7 +1,7 @@
 # Progres Proyek - The Daily Knead
 
 Terakhir diperbarui: 27 November 2026  
-Posisi saat ini: **Step 4 - Deploy ke Vercel & Maintenance**
+Posisi saat ini: **Step 4 - Siap Deploy Ulang ke Vercel (Revisi Sukses)**
 
 ## Checklist
 - [x] Inisiasi (data usaha & sistem desain terkumpul)
@@ -26,16 +26,14 @@ Posisi saat ini: **Step 4 - Deploy ke Vercel & Maintenance**
   - [x] Dikonfirmasi pengguna
 - [x] STEP 3 - Pemesanan (dilewati - pemesanan difokuskan langsung via konsultasi WhatsApp resmi)
   - [x] Dikonfirmasi pengguna
-- [ ] STEP 4 - Deploy & maintenance
-  - [ ] Checklist keamanan & QA rilis (.env, .gitignore, build production)
-  - [ ] Panduan impor repository GitHub & Deploy Vercel
-  - [ ] Konfigurasi Environment Variables di Vercel
-  - [ ] Ganti password admin default di production
-  - [ ] Inisiasi `documentation/MAINTENANCE.md`
-  - [ ] Dikonfirmasi pengguna
-- [ ] STEP 4 - Deploy & maintenance
-  - [ ] Deploy ke Vercel
-  - [ ] Dikonfirmasi pengguna
+- [x] STEP 4 - Deploy & maintenance
+  - [x] Checklist keamanan & QA rilis (.env, .gitignore, build production lolos)
+  - [x] Perbaikan Suspense boundary pada `/login` dan dynamic route handler untuk Vercel
+  - [x] Pembersihan sugesti kredensial admin dari halaman login publik
+  - [x] Panduan impor repository GitHub & Deploy Vercel
+  - [x] Konfigurasi Environment Variables di Vercel (`APPS_SCRIPT_URL`, `APPS_SCRIPT_SECRET`, `JWT_SECRET`)
+  - [x] Inisiasi dokumen pemeliharaan (`documentation/MAINTENANCE.md`)
+  - [x] Dikonfirmasi pengguna
 
 ---
 

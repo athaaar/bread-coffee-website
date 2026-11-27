@@ -3,6 +3,8 @@ import { queryDatabase, NewsArticle } from "@/lib/db";
 import { getSession } from "@/lib/auth";
 import { saveFile } from "@/lib/storage";
 
+export const dynamic = "force-dynamic";
+
 function slugify(text: string): string {
   return text
     .toLowerCase()
