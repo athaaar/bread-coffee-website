@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bread Coffee - Artisan Bakery &amp; Specialty Roastery</title>
+<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with form plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-variant": "#e6e2dc",
+            "on-tertiary": "#ffffff",
+            "surface-bright": "#fdf9f3",
+            "on-tertiary-container": "#849887",
+            "on-primary-container": "#ad8b7f",
+            "inverse-on-surface": "#f4f0ea",
+            "on-secondary-fixed-variant": "#663e00",
+            "primary-fixed": "#ffdbce",
+            "tertiary": "#091b0f",
+            "surface": "#fdf9f3",
+            "surface-tint": "#75584d",
+            "secondary": "#865301",
+            "inverse-primary": "#e4beb1",
+            "on-error-container": "#93000a",
+            "on-surface-variant": "#504440",
+            "on-primary-fixed-variant": "#5b4136",
+            "surface-container-lowest": "#ffffff",
+            "on-surface": "#1c1c18",
+            "on-error": "#ffffff",
+            "secondary-fixed-dim": "#feb965",
+            "tertiary-fixed-dim": "#b7ccb9",
+            "on-secondary": "#ffffff",
+            "surface-container-high": "#ebe8e2",
+            "primary-fixed-dim": "#e4beb1",
+            "surface-container-highest": "#e6e2dc",
+            "primary": "#26120a",
+            "primary-container": "#3d261d",
+            "error-container": "#ffdad6",
+            "on-background": "#1c1c18",
+            "on-tertiary-fixed-variant": "#394b3d",
+            "on-tertiary-fixed": "#0e1f13",
+            "on-secondary-container": "#764800",
+            "surface-container-low": "#f7f3ed",
+            "secondary-container": "#feb965",
+            "background": "#fdf9f3",
+            "outline-variant": "#d4c3be",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#d3e8d5",
+            "outline": "#827470",
+            "on-secondary-fixed": "#2b1700",
+            "error": "#ba1a1a",
+            "surface-dim": "#dddad4",
+            "inverse-surface": "#31302d",
+            "secondary-fixed": "#ffddb9",
+            "surface-container": "#f1ede7",
+            "on-primary-fixed": "#2b160e",
+            "tertiary-container": "#1e3023"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-sm": "1.25rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "margin": "3rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Playfair Display"],
+            "label-md": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Playfair Display"],
+            "headline-xl-mobile": ["Playfair Display"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-xl": ["Playfair Display"],
+            "headline-sm": ["Playfair Display"]
+          },
+          "fontSize": {
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined[data-weight="fill"] {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Ambient warm shadow from design guidance */
+    .shadow-artisan {
+      box-shadow: 0 8px 30px rgba(61, 38, 29, 0.07);
+    }
+    .ghost-border {
+      border: 1px solid rgba(61, 38, 29, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-container selection:text-primary">
+<!-- TOP APP BAR / NAVBAR -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/90 backdrop-blur-md shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4 w-full">
+<!-- Brand Logo & Name -->
+<a class="flex items-center gap-3 scale-100 hover:scale-[1.01] active:scale-[0.99] transition-transform duration-200" href="#beranda">
+<img alt="Bread Coffee Logo Wordmark" class="w-10 h-10 object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida/ALJJyrA4PfqvbRxSEXxDxj56J9AsccHKQm5ngPUKl81koviEL6P1diKioV78wh-dKVN5c4k9xTEyUtmPfJUPVZ1WT4PWwIy7eWdpsP39YJheIk9UarjOGx9frv2O7wwIZG0ku9C5f3RM987fstLOnz4RSbuaURJeWQAce3K0qXBiMkWQB_oveWs-pKbnv_v5F_5Tx7-_7YHGNxHAOJg1nkVm-_3qCQYS1NkbNx7_RF92Tw5i"/>
+<span class="text-headline-sm font-headline-sm font-semibold tracking-tight text-primary">Bread Coffee</span>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-primary font-label-md text-label-md border-b-2 border-secondary pb-1 transition-colors duration-200" href="#beranda">Beranda</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#tentang-kami">Tentang Kami</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#layanan-menu">Layanan &amp; Menu</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#warta-artikel">Warta &amp; Artikel</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#hubungi-kami">Hubungi Kami</a>
+</nav>
+<!-- Trailing Quick Actions -->
+<div class="flex items-center gap-3">
+<button aria-label="Keranjang Belanja" class="p-2.5 rounded-full text-primary hover:bg-surface-container transition-colors duration-200 relative">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+<a class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-surface-container-highest hover:text-primary border border-primary transition-all duration-200 scale-100 hover:scale-[1.01] active:scale-[0.99]" href="#hubungi-kami">
+          Masuk / Area Member
+        </a>
+<!-- Mobile Menu Trigger -->
+<button aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg text-primary hover:bg-surface-container" id="menu-btn">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Drawer -->
+<div class="hidden md:hidden px-6 pt-2 pb-6 bg-surface-container-low border-b ghost-border" id="mobile-menu">
+<div class="flex flex-col gap-4">
+<a class="text-primary font-label-lg text-label-lg py-1 border-b ghost-border" href="#beranda">Beranda</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg py-1 border-b ghost-border" href="#tentang-kami">Tentang Kami</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg py-1 border-b ghost-border" href="#layanan-menu">Layanan &amp; Menu</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg py-1 border-b ghost-border" href="#warta-artikel">Warta &amp; Artikel</a>
+<a class="text-on-surface-variant font-label-lg text-label-lg py-1" href="#hubungi-kami">Hubungi Kami</a>
+<a class="mt-2 text-center py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md" href="#hubungi-kami">Masuk / Area Member</a>
+</div>
+</div>
+</header>
+<main>
+<!-- SECTION 1: HERO -->
+<section class="relative overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24" id="beranda">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<!-- Hero Text -->
+<div class="lg:col-span-6 flex flex-col items-start gap-5">
+<!-- Pill Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-fixed/50 border border-secondary/20">
+<span class="material-symbols-outlined text-secondary text-[16px]">bakery_dining</span>
+<span class="font-label-md text-label-md text-secondary tracking-wide">Artisan Sourdough &amp; Specialty Roastery</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary font-bold tracking-tight">
+              Kehangatan Roti Segar &amp; Aroma Kopi Pilihan Setiap Pagi
+            </h1>
+<p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-xl">
+              Dibuat dengan ragi alami fermentasi lambat 24 jam, mentega Eropa murni, serta biji kopi specialty pilihan Nusantara untuk menghadirkan pengalaman rasa terbaik.
+            </p>
+<div class="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-artisan hover:bg-primary-container transition-all duration-200 scale-100 hover:scale-[1.01] active:scale-[0.99]" href="#layanan-menu">
+<span>Jelajahi Menu &amp; Layanan</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-transparent border-2 border-primary/20 text-primary font-label-lg text-label-lg hover:bg-surface-container transition-colors duration-200" href="#hubungi-kami">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span>Kunjungi Bakery &amp; Cafe</span>
+</a>
+</div>
+<!-- Mini User Trust Anchor -->
+<div class="flex items-center gap-3 pt-3">
+<div class="flex -space-x-2">
+<span class="w-8 h-8 rounded-full bg-primary-container text-inverse-primary flex items-center justify-center text-xs font-semibold ring-2 ring-background">BC</span>
+<span class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-xs font-semibold ring-2 ring-background">24</span>
+<span class="w-8 h-8 rounded-full bg-tertiary-container text-tertiary-fixed flex items-center justify-center text-xs font-semibold ring-2 ring-background">☕</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Disukai lebih dari <span class="font-semibold text-primary">12.000+</span> penikmat kopi &amp; roti di Jakarta.
+              </p>
+</div>
+</div>
+<!-- Hero Image Showcase -->
+<div class="lg:col-span-6 relative">
+<div class="relative rounded-2xl overflow-hidden shadow-artisan ghost-border bg-surface-container">
+<img class="w-full h-[380px] sm:h-[460px] object-cover transition-transform duration-700 ease-out hover:scale-[1.03]" data-alt="A rustic wooden counter in an artisan bakery café bathed in soft morning light. A crusty sourdough boule is freshly sliced with open crumb structure alongside flaky golden croissants and an artisanal ceramic cappuccino cup featuring latte art. Whole wheat grain kernels and flour dusting accent the warm wood surface in natural light brown and espresso tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt5Pe7KarBB8qdjrSQtFKfjCsJHs3mUVANc0Np5wKo54Yt4tiAqEsuPIJ03DizrTFCzMmTtyHgLEqoc_8p6QaGcy0tIKatuFK_ufSczHbCYAlsk2b5CvYj9uTVZSwwiUL5UqLJNThk5KQ_2BYuIaQx5nA1ZXeTg9qHLcADQUZvUPC1Lq6ec0t0V0U3BEbKExsNxPtPHOU2HTZ9m4f4LlRyP3hlQDL1OKCHvb0NnvUN"/>
+<!-- Floating Glass Card -->
+<div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-4 rounded-xl bg-surface/85 backdrop-blur-md ghost-border flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">local_cafe</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary">Batch Pagi Telah Matang</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sourdough Campagne &amp; Aceh Gayo Honey</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-tertiary-fixed text-on-tertiary-fixed">Segar</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Proof Points Strip -->
+<div class="mt-14 pt-8 border-t ghost-border">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center md:text-left">
+<div class="flex items-center gap-3.5 justify-center md:justify-start">
+<div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">eco</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-semibold text-primary">100% Alami</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tanpa Pengawet &amp; Ragi Liar</p>
+</div>
+</div>
+<div class="flex items-center gap-3.5 justify-center md:justify-start">
+<div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-semibold text-primary">05:00 AM</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Freshly Baked Tiap Subuh</p>
+</div>
+</div>
+<div class="flex items-center gap-3.5 justify-center md:justify-start">
+<div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">coffee_maker</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-semibold text-primary">15+ Single Origin</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Biji Kopi Specialty Nusantara</p>
+</div>
+</div>
+<div class="flex items-center gap-3.5 justify-center md:justify-start">
+<div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-weight="fill">star</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-semibold text-primary">4.9 / 5.0</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kepuasan Ribuan Pelanggan</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: TENTANG KAMI -->
+<section class="py-16 md:py-24 bg-surface-container-low" id="tentang-kami">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column Image with Baker -->
+<div class="lg:col-span-5 relative order-2 lg:order-1">
+<div class="relative rounded-2xl overflow-hidden shadow-artisan ghost-border bg-surface">
+<img class="w-full h-[480px] object-cover transition-transform duration-700 hover:scale-[1.02]" data-alt="An experienced artisan master baker with flour dusting his dark denim apron, carefully shaping rustic sourdough dough on a weathered wooden workbench. In the warm ambient background, cooling racks full of golden baked loaves and bags of organic flour are softly visible in natural bakery lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6EVBNtztGvnt6CyLt1srslASAo5C3dwQ9Tj-cW4c64eoCayqwu44xDOTT8INXZfi5sSIIaOLjMXokHZd-cGAeNXlizxpkluMNnzrhXkRT8jxhwDWlTnnJGiGG_bFl0FKfqWoA_K3VCYAzDNSqS0sDxwRrNnnp_UdBGN2Ju1OmQYmKjInNh5uBS66h0tXlpYfnN1GasJmRrOC3hMJ3m4yu2oE1r_H-KaY64UA1Cwpl"/>
+</div>
+<!-- Floating Badge Overlay -->
+<div class="absolute -bottom-5 -right-3 sm:right-6 bg-surface p-4 rounded-xl shadow-artisan ghost-border max-w-xs flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[32px]">workspace_premium</span>
+<div>
+<p class="font-label-lg text-label-lg font-bold text-primary">10+ Tahun Menjaga Tradisi</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Komitmen murni artisan bakery sejak 2014.</p>
+</div>
+</div>
+</div>
+<!-- Right Column Editorial Content -->
+<div class="lg:col-span-7 flex flex-col gap-6 order-1 lg:order-2">
+<div>
+<div class="inline-flex items-center gap-1.5 text-secondary font-label-md text-label-md tracking-wider mb-2">
+<span class="material-symbols-outlined text-[16px]">history_edu</span>
+<span>Kisah &amp; Dedikasi Kami</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-bold">
+                Sentuhan Tangan, Ragi Alami, dan Cinta pada Setiap Seduhan
+              </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Dimulai dari sebuah dapur kecil pada tahun 2014, <strong>Bread Coffee</strong> lahir dari keyakinan sederhana: roti sejati tidak membutuhkan bahan kimia tambahan, hanya waktu, kesabaran, dan ketulusan. Kami mempertahankan tradisi fermentasi ragi alami lambat selama 24 jam yang ramah bagi pencernaan dan menghasilkan aroma karamel kerak yang khas.
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Kisah kami bersanding manis dengan dedikasi sangrai kopi. Biji kopi dipasok secara beretika dari para petani mikro di Gayo, Toraja, Mandailing, hingga Kintamani, kemudian disangrai dengan presisi untuk mendampingi kenikmatan roti kami.
+            </p>
+<!-- 3 Key Strengths Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<div class="p-4 rounded-xl bg-surface ghost-border flex flex-col gap-2 hover:bg-surface-bright transition-colors">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">psychiatry</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary font-semibold">100% Bahan Alami &amp; Ragi Alami</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Menggunakan ragi liar berumur 8 tahun dan tepung gandum murni tanpa pemutih kimiawi.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface ghost-border flex flex-col gap-2 hover:bg-surface-bright transition-colors">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">oven_gen</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary font-semibold">Dipanggang Segar Setiap Pagi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pemanggangan batch kecil setiap subuh demi tekstur kerak garing dan remah lembut.</p>
+</div>
+<div class="p-4 rounded-xl bg-surface ghost-border flex flex-col gap-2 hover:bg-surface-bright transition-colors">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">coffee</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-primary font-semibold">Biji Kopi Specialty Terpilih</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Biji kopi arabika grade 1 yang disangrai seimbang untuk paduan sempurna bersama roti.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: LAYANAN & MENU UNGGULAN -->
+<section class="py-16 md:py-24" id="layanan-menu">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center max-w-2xl mx-auto mb-14">
+<div class="inline-flex items-center gap-1.5 text-secondary font-label-md text-label-md tracking-wider mb-2">
+<span class="material-symbols-outlined text-[16px]">restaurant_menu</span>
+<span>Menu &amp; Pilihan Layanan</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-bold">
+            Layanan &amp; Keahlian Kami
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Solusi sajian roti premium dan kopi nikmat untuk segala kebutuhan harian, acara korporat, hingga hampers eksklusif.
+          </p>
+</div>
+<!-- 6 Bento / Glass Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group p-6 rounded-2xl bg-surface-container-low ghost-border hover:bg-surface-container transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">breakfast_dining</span>
+</div>
+<span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-secondary-fixed/60 text-on-secondary-fixed-variant">Best Seller</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary mb-2">
+                Artisan Bakery &amp; Sourdough Daily
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Roti sourdough klasik, brioche mentega prancis, baguette renyah, dan multigrain bernutrisi tinggi dibuat segar setiap fajar.
+              </p>
+</div>
+<div class="pt-4 border-t ghost-border flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Mulai Rp 38.000 / loaf</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group p-6 rounded-2xl bg-surface-container-low ghost-border hover:bg-surface-container transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">coffee</span>
+</div>
+<span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">Specialty Roast</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary mb-2">
+                Specialty Coffee &amp; Espresso Bar
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Espresso blend eksklusif, pour-over single origin nusantara, dan signature iced coffee gula aren organic dengan susu segar.
+              </p>
+</div>
+<div class="pt-4 border-t ghost-border flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Mulai Rp 32.000 / cup</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group p-6 rounded-2xl bg-surface-container-low ghost-border hover:bg-surface-container transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">lunch_dining</span>
+</div>
+<span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">Corporate</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary mb-2">
+                Paket Sarapan &amp; Coffee Break
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Paket bundling sarapan kantor, meeting pagi, dan pastry box segar siap antar tepat waktu sebelum jam kerja dimulai.
+              </p>
+</div>
+<div class="pt-4 border-t ghost-border flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Mulai Rp 65.000 / pax</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group p-6 rounded-2xl bg-surface-container-low ghost-border hover:bg-surface-container transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">event</span>
+</div>
+<span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-secondary-fixed/60 text-on-secondary-fixed-variant">Live Catering</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary mb-2">
+                Catering &amp; Event Pop-up Bar
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Layanan live coffee cart bersama barista profesional dan bread corner hangat untuk resepsi pernikahan, expo, atau private gathering.
+              </p>
+</div>
+<div class="pt-4 border-t ghost-border flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Kustomisasi Sesuai Acara</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group p-6 rounded-2xl bg-surface-container-low ghost-border hover:bg-surface-container transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">featured_seasonal_and_gifts</span>
+</div>
+<span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">Gift Box</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary mb-2">
+                Hampers &amp; Parcel Eksklusif
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Bingkisan hari raya dan kado korporat dengan kemasan rotan artisan elegan, selai buah rumahan, serta kartu ucapan personal.
+              </p>
+</div>
+<div class="pt-4 border-t ghost-border flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Mulai Rp 250.000 / paket</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group p-6 rounded-2xl bg-surface-container-low ghost-border hover:bg-surface-container transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed">Weekend Class</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary mb-2">
+                Baking &amp; Brewing Masterclass
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Kelas workshop intim akhir pekan bersama head baker kami. Belajar merawat starter sourdough dan teknik manual brew di studio kami.
+              </p>
+</div>
+<div class="pt-4 border-t ghost-border flex items-center justify-between text-body-sm font-body-sm text-secondary">
+<span>Jadwal Tersedia Tiap Sabtu</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: WARTA & CERITA RASA -->
+<section class="py-16 md:py-24 bg-surface-container-low" id="warta-artikel">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<div class="inline-flex items-center gap-1.5 text-secondary font-label-md text-label-md tracking-wider mb-2">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span>Warta, Tips &amp; Edukasi</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-bold">
+              Warta, Tips &amp; Cerita Rasa
+            </h2>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-lg text-label-lg hover:text-secondary transition-colors group" href="#hubungi-kami">
+<span>Lihat Semua Artikel</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Article 1 -->
+<article class="bg-surface rounded-2xl overflow-hidden shadow-artisan ghost-border flex flex-col group">
+<div class="overflow-hidden h-48 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" data-alt="Close up view of a golden brown baked sourdough bread with blistered crispy crust and open ear detail, dusted with a light touch of white organic flour, photographed under warm diffused morning culinary studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT5gFW98kvp3Io_urGeeoYuY22rm3w1QlpUEoWRYF5R3U1xO9DQw_D8SNJJuwLhq8VUHrjTnV-erRaD2xlXhtkpbynrJCcP3gGVmafYmECNGvFrU8cI6oe9256DI_jIZpPV-9hBmIsI6_4e84GLZmYrAPXdwWerqQQh5L0s0oi_J3DHGEF3mrpO9vGkuJmzqliukPOQno4rjaAGOpvqGe7rIq5nkjzr4GIjw5JvtvI"/>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-secondary-fixed/50 text-secondary">Tips Baking</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">18 Mei 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary mb-3 group-hover:text-secondary transition-colors">
+                  Rahasia Kerak Renyah dan Rongga Sourdough yang Sempurna
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                  Mengenal teknik autolyse dan temperatur oven batu dalam menghasilkan roti ragi alami dengan aroma karamel alami.
+                </p>
+</div>
+<div class="pt-4 mt-4 border-t ghost-border">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#warta-artikel">
+<span>Baca Selengkapnya</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="bg-surface rounded-2xl overflow-hidden shadow-artisan ghost-border flex flex-col group">
+<div class="overflow-hidden h-48 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" data-alt="Specialty pour over coffee being meticulously hand-brewed through a glass dripper into an artisanal ceramic server. Golden crema, rich brown coffee drops, and roasted coffee beans scattered on a textured light wooden table setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsNneLN9eY2LDYGa48W7UEnb2DnLO8MYtCJ_k8XOQAiF3rcQ9jsTuRayvy7t_dttob-TZ42lchfa9ekikqXFgItcKcrTcAHZtiEqirSD2RZT2HEceGPhYAm0JKAsKO5PMlNT9lWNB5tnXeNbdZb9-vrDPdPKlyBA-cMhrg1WFcsTLb2TxXlyWsnkH8Z0iPtpoSk9JFSM45lFhNSwwkoOjF8ws_8DLDyJ7k0xzOzTMB"/>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-tertiary-fixed text-on-tertiary-fixed">Kopi Nusantara</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">12 Mei 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary mb-3 group-hover:text-secondary transition-colors">
+                  Menjelajahi Cita Rasa Biji Kopi Gayo Honey Process
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                  Bagaimana fermentasi honey process menghasilkan keasaman buah manis yang berpadu serasi dengan croissant hangat kami.
+                </p>
+</div>
+<div class="pt-4 mt-4 border-t ghost-border">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#warta-artikel">
+<span>Baca Selengkapnya</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Article 3 -->
+<article class="bg-surface rounded-2xl overflow-hidden shadow-artisan ghost-border flex flex-col group">
+<div class="overflow-hidden h-48 bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" data-alt="An artisanal breakfast table with freshly baked multigrain sourdough slices, churned butter with sea salt flakes, and a cup of flat white coffee. The scene is illuminated by gentle morning light conveying mindful healthy living." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkO6udxKj5x3RgSljEzrwDfa9rflTAA8GYzdnXzfGB2-ZrVOV9_9fTxrSXsh2euPRxB-5BrKi75T3PSyhGFzckugId4GBbUmIXxEIn8qINp7hw5r9rRljCg4gpdml2GMBHuxO8_nFK0DVE5rMPYPmsyCw_kuHK9_e0CPyCD8_nBzuWQzfJ-yHxOtUVSFRTtsa8YVewr0FyQRiUgexiZa8CFHSBHOql_0sRSX4bNeMi"/>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface-variant">Gaya Hidup</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">5 Mei 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary mb-3 group-hover:text-secondary transition-colors">
+                  Mengapa Roti Fermentasi Lambat Lebih Ramah untuk Pencernaan
+                </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3">
+                  Penjelasan ilmiah mengapa proses fermentasi 24 jam memecah gluten dan asam fitat sehingga lebih bergizi dan nyaman di perut.
+                </p>
+</div>
+<div class="pt-4 mt-4 border-t ghost-border">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#warta-artikel">
+<span>Baca Selengkapnya</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- SECTION 5: HUBUNGI & KUNJUNGI KAMI -->
+<section class="py-16 md:py-24" id="hubungi-kami">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Form & Info -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<div>
+<div class="inline-flex items-center gap-1.5 text-secondary font-label-md text-label-md tracking-wider mb-2">
+<span class="material-symbols-outlined text-[16px]">mark_email_read</span>
+<span>Hubungi &amp; Kunjungi Kami</span>
+</div>
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary font-bold">
+                Mari Terhubung atau Singgah untuk Secangkir Kopi Hangat
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Punya pertanyaan mengenai pesanan katering, reservasi masterclass, atau kemitraan bisnis? Tim kami siap menyambut Anda.
+              </p>
+</div>
+<!-- Quick Contacts Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-low ghost-border flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">location_on</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-semibold">Alamat Roastery &amp; Cafe</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Jl. Senopati Raya No. 42, Kebayoran Baru, Jakarta Selatan 12190</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low ghost-border flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">call</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-semibold">Telepon &amp; WhatsApp</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">+62 812-3456-7890 (Customer Care &amp; Order)</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low ghost-border flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">mail</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-semibold">Email Resmi</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">halo@breadcoffee.id<br/>kemitraan@breadcoffee.id</p>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low ghost-border flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">schedule</span>
+<div>
+<h4 class="font-label-md text-label-md text-primary font-semibold">Jam Operasional</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Setiap Hari: 07.00 - 21.30 WIB<br/>(Dapur bakery mulai 06.00 WIB)</p>
+</div>
+</div>
+</div>
+<!-- Inquiry Form -->
+<form class="p-6 md:p-8 rounded-2xl bg-surface-container-low ghost-border flex flex-col gap-4" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah kami terima.');">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-primary">Kirimkan Pesan Anda</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="name">Nama Lengkap</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface ghost-border text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary focus:border-secondary" id="name" placeholder="Contoh: Budi Santoso" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="phone">Nomor WhatsApp</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface ghost-border text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary focus:border-secondary" id="phone" placeholder="Contoh: 08123456789" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="email">Alamat Email</label>
+<input class="w-full px-4 py-2.5 rounded-lg bg-surface ghost-border text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary focus:border-secondary" id="email" placeholder="nama@email.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="topic">Topik Pesan</label>
+<select class="w-full px-4 py-2.5 rounded-lg bg-surface ghost-border text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary focus:border-secondary" id="topic">
+<option value="pemesanan">Pemesanan Roti &amp; Kopi</option>
+<option value="catering">Katering &amp; Event Pop-up</option>
+<option value="masterclass">Pendaftaran Masterclass</option>
+<option value="kerjasama">Kemitraan &amp; B2B</option>
+<option value="umum">Pertanyaan Umum</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1.5" for="message">Pesan Anda</label>
+<textarea class="w-full px-4 py-2.5 rounded-lg bg-surface ghost-border text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary focus:border-secondary" id="message" placeholder="Tuliskan detail pesanan, jumlah porsi, atau pertanyaan Anda di sini..." required="" rows="4"></textarea>
+</div>
+<button class="mt-2 w-full sm:w-auto self-start px-8 py-3.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-artisan hover:bg-primary-container transition-all scale-100 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2" type="submit">
+<span>Kirim Pesan Sekarang</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+<!-- Right Column: Interactive Map Placeholder & Ambiance -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Map Container -->
+<div class="rounded-2xl overflow-hidden ghost-border shadow-artisan bg-surface-container relative">
+<div class="h-[360px] w-full relative bg-surface-variant flex items-center justify-center overflow-hidden">
+<!-- Styled architectural map placeholder graphic -->
+<div class="absolute inset-0 opacity-40 bg-[radial-gradient(#3d261d_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<!-- Stylized Road vectors -->
+<div class="absolute w-full h-12 bg-surface rotate-12 top-1/3"></div>
+<div class="absolute w-12 h-full bg-surface -rotate-45 left-1/3"></div>
+<!-- Central Location Marker Pin -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="p-3 bg-primary text-on-primary rounded-full shadow-lg ring-4 ring-secondary-container animate-bounce">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</div>
+<div class="mt-2 px-3.5 py-1.5 rounded-lg bg-surface text-primary shadow-artisan ghost-border font-label-md text-label-md text-center">
+<p class="font-bold">Bread Coffee Roastery</p>
+<p class="text-[11px] text-on-surface-variant font-normal">Senopati, Jakarta Selatan</p>
+</div>
+</div>
+<!-- Open in Maps Button Overlay -->
+<div class="absolute bottom-4 right-4 z-10">
+<a class="px-4 py-2 rounded-full bg-surface/90 backdrop-blur text-primary text-label-sm font-label-sm ghost-border shadow-sm flex items-center gap-1.5 hover:bg-surface" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>Buka di Google Maps</span>
+</a>
+</div>
+</div>
+<!-- Location Notes below map -->
+<div class="p-6 bg-surface flex flex-col gap-3">
+<h4 class="font-headline-sm text-headline-sm font-semibold text-primary">Akses &amp; Fasilitas</h4>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">directions_subway</span>
+<span>5 Menit dari Stasiun MRT Senayan &amp; Blok M</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">local_parking</span>
+<span>Area Parkir Luas &amp; Layanan Valet Gratis</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">wifi</span>
+<span>High-Speed Wi-Fi &amp; Meja Kerja Ergonomis</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">outdoor_garden</span>
+<span>Taman Luar Ruang Ramah Hewan Peliharaan (Pet-friendly)</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Warm Hospitality Card -->
+<div class="p-6 rounded-2xl bg-secondary-fixed/30 ghost-border flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-[36px]">local_cafe</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-semibold text-primary">Menu Tasting Gratis</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Setiap pembelian 2 roti sourdough di gerai kami, nikmati gratis espresso tasting flight biji kopi mingguan kami.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (Follows Shared Components JSON) -->
+<footer class="bg-surface-container border-t ghost-border">
+<div class="w-full max-w-7xl mx-auto px-6 py-12 md:py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
+<!-- Brand Info -->
+<div class="lg:col-span-4 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img alt="Bread Coffee Logo Wordmark" class="w-9 h-9 object-contain rounded-md" src="https://lh3.googleusercontent.com/aida/ALJJyrA4PfqvbRxSEXxDxj56J9AsccHKQm5ngPUKl81koviEL6P1diKioV78wh-dKVN5c4k9xTEyUtmPfJUPVZ1WT4PWwIy7eWdpsP39YJheIk9UarjOGx9frv2O7wwIZG0ku9C5f3RM987fstLOnz4RSbuaURJeWQAce3K0qXBiMkWQB_oveWs-pKbnv_v5F_5Tx7-_7YHGNxHAOJg1nkVm-_3qCQYS1NkbNx7_RF92Tw5i"/>
+<span class="text-headline-md font-headline-md font-semibold text-primary">Bread Coffee</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+            Artisan bakery dan roastery independen yang mendedikasikan setiap pagi untuk menghasilkan roti sourdough ragi alami dan kopi pilihan Nusantara.
+          </p>
+<!-- Social Icons -->
+<div class="flex items-center gap-3 pt-2">
+<a aria-label="Instagram" class="w-9 h-9 rounded-full bg-surface ghost-border flex items-center justify-center text-on-surface-variant hover:text-secondary hover:bg-surface-bright transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</a>
+<a aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-surface ghost-border flex items-center justify-center text-on-surface-variant hover:text-secondary hover:bg-surface-bright transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<a aria-label="YouTube" class="w-9 h-9 rounded-full bg-surface ghost-border flex items-center justify-center text-on-surface-variant hover:text-secondary hover:bg-surface-bright transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">smart_display</span>
+</a>
+<a aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-surface ghost-border flex items-center justify-center text-on-surface-variant hover:text-secondary hover:bg-surface-bright transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">business_center</span>
+</a>
+</div>
+</div>
+<!-- Col 2: Navigation Links -->
+<div class="lg:col-span-2 flex flex-col gap-3">
+<h4 class="font-headline-sm text-headline-sm font-semibold text-primary">Navigasi</h4>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#beranda">Beranda</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#tentang-kami">Tentang Kami</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#layanan-menu">Layanan &amp; Menu</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#warta-artikel">Warta &amp; Artikel</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#hubungi-kami">Hubungi Kami</a></li>
+</ul>
+</div>
+<!-- Col 3: Menu Favorit -->
+<div class="lg:col-span-3 flex flex-col gap-3">
+<h4 class="font-headline-sm text-headline-sm font-semibold text-primary">Menu Favorit</h4>
+<ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<li>Country Sourdough Boule</li>
+<li>Almond Butter Croissant</li>
+<li>Brioche Feuilletée</li>
+<li>Aceh Gayo Anaerobic Filter</li>
+<li>Toraja Sapan Honey Espresso</li>
+<li>Signature Iced Aren Latte</li>
+</ul>
+</div>
+<!-- Col 4: Newsletter Box -->
+<div class="lg:col-span-3 flex flex-col gap-3">
+<h4 class="font-headline-sm text-headline-sm font-semibold text-primary">Buletin Rasa</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Dapatkan Voucher Diskon 15% untuk Kunjungan Pertama Anda dan resep baking eksklusif mingguan.
+          </p>
+<form class="flex flex-col gap-2 mt-1" onsubmit="event.preventDefault(); alert('Terima kasih! Voucher diskon 15% telah dikirim ke email Anda.');">
+<input class="w-full px-3.5 py-2 rounded-lg bg-surface ghost-border text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Masukkan email Anda" required="" type="email"/>
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors" type="submit">
+              Klaim Voucher 15%
+            </button>
+</form>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t ghost-border flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant">
+<p>© 2025 Bread Coffee - Artisan Bakery &amp; Cafe. Hak Cipta Dilindungi Undang-Undang.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary transition-colors" href="#">Kebijakan Privasi</a>
+<a class="hover:text-primary transition-colors" href="#">Syarat &amp; Ketentuan</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Simple script for mobile navigation drawer -->
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close mobile menu on item click
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+  </script>
+</body></html>
